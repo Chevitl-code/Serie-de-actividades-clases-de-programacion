@@ -1,0 +1,230 @@
+/* =========================
+   GENERAL
+========================= */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background: #080d13;
+    color: white;
+
+    font-family: Arial, sans-serif;
+}
+
+
+/* =========================
+   TITULO
+========================= */
+
+body > h1 {
+    width: 90%;
+    max-width: 700px;
+
+    margin: 60px auto 35px;
+
+    text-align: center;
+
+    font-size: 32px;
+
+    color: white;
+
+    text-shadow: 0 0 15px rgba(0, 200, 255, 0.2);
+}
+
+
+/* =========================
+   TEXTO "CUOTAS"
+========================= */
+
+body > p:first-of-type {
+    width: 90%;
+    max-width: 500px;
+
+    margin: 0 auto 10px;
+
+    color: #9eabb5;
+
+    font-size: 16px;
+
+    text-align: left;
+}
+
+
+/* =========================
+   INPUT
+========================= */
+
+#input1 {
+    display: block;
+
+    width: 90%;
+    max-width: 500px;
+
+    box-sizing: border-box;
+
+    padding: 15px;
+
+    background: #0c141b;
+
+    border: 1px solid #263b49;
+
+    border-radius: 10px;
+
+    color: white;
+
+    font-size: 18px;
+
+    text-align: center;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+
+/* Placeholder */
+
+#input1::placeholder {
+    color: #65717d;
+}
+
+
+/* Input seleccionado */
+
+#input1:focus {
+    border-color: #00c8ff;
+
+    box-shadow: 0 0 15px rgba(0, 200, 255, 0.2);
+}
+
+
+/* =========================
+   BOTÓN
+========================= */
+
+body > button {
+    display: block;
+
+    width: 90%;
+    max-width: 500px;
+
+    margin: 25px auto 0;
+
+    padding: 15px;
+
+    background: #00bfff;
+
+    color: #031018;
+
+    border: none;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+/* Hover */
+
+body > button:hover {
+    background: #00d5ff;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 8px 25px rgba(0, 191, 255, 0.25);
+}
+
+
+/* Click */
+
+body > button:active {
+    transform: translateY(0);
+}
+
+
+/* =========================
+   RESULTADO
+========================= */
+
+#resultado {
+    width: 90%;
+    max-width: 500px;
+
+    min-height: 22px;
+
+    box-sizing: border-box;
+
+    margin: 20px auto 50px;
+
+    padding: 18px;
+
+    background: #0c141b;
+
+    border: 1px solid #1c3544;
+
+    border-radius: 12px;
+
+    color: #00c8ff;
+
+    font-size: 17px;
+
+    line-height: 1.5;
+
+    text-align: center;
+
+    box-shadow: 0 0 20px rgba(0, 200, 255, 0.06);
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 600px) {
+
+    body > h1 {
+        margin-top: 35px;
+
+        font-size: 25px;
+    }
+
+
+    body > p:first-of-type {
+        font-size: 14px;
+    }
+
+
+    #input1 {
+        padding: 13px;
+
+        font-size: 16px;
+    }
+
+
+    body > button {
+        padding: 13px;
+    }
+
+
+    #resultado {
+        font-size: 15px;
+
+        padding: 15px;
+    }
+}

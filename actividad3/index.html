@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Actividad - Condicionales</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main>
+
+        <h1>Condicionales en JavaScript</h1>
+
+        <p class="descripcion">
+            Esta actividad muestra cómo funcionan los condicionales
+            <b>if</b>, <b>else if</b> y <b>else</b>.
+        </p>
+
+
+        <div class="tarjeta">
+
+            <h2>Resultado de la actividad</h2>
+
+            <p>
+                Los mensajes de <b>console.log()</b> se pueden ver
+                en la consola del navegador.
+            </p>
+
+            <p class="instruccion">
+                Presiona <b>F12</b> y entra en la pestaña
+                <b>Console</b> para ver los resultados.
+            </p>
+
+
+            <!-- =========================
+                 PRIMER CONDICIONAL
+            ========================= -->
+
+            <div class="codigo">
+
+                <h3>Primer condicional</h3>
+
+                <pre><code>if (false) {
+    console.log("Este mensaje no se mostrará");
+} else if (false) {
+    console.log("Este mensaje tampoco");
+} else if (false) {
+    console.log("Este mensaje SI se mostrará 👋😁");
+} else {
+    console.log("A mi no me verás 😑🙄");
+}</code></pre>
+
+                <div class="explicacion">
+
+                    <h4>¿Por qué sale ese resultado?</h4>
+
+                    <p>
+                        Todas las condiciones anteriores son
+                        <b>false</b>.
+                    </p>
+
+                    <p>
+                        Como ningún <b>if</b> ni <b>else if</b> se cumple,
+                        JavaScript llega al <b>else</b> y ejecuta su mensaje.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================
+                 SEGUNDO CONDICIONAL
+            ========================= -->
+
+            <div class="codigo">
+
+                <h3>Segundo condicional</h3>
+
+                <pre><code>if (true) {
+    console.log("Este mensaje no se mostrará");
+} else if (true) {
+    console.log("Este mensaje tampoco");
+} else if (true) {
+    console.log("Este mensaje SI se mostrará 👋😁");
+} else {
+    console.log("A mi no me verás 😑🙄");
+}</code></pre>
+
+                <div class="explicacion">
+
+                    <h4>¿Por qué sale ese resultado?</h4>
+
+                    <p>
+                        La primera condición es <b>true</b>.
+                    </p>
+
+                    <p>
+                        Por eso JavaScript ejecuta inmediatamente
+                        el código dentro del primer <b>if</b>.
+                        Los <b>else if</b> y el <b>else</b> ya no se revisan.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =========================
+                 TERCER CONDICIONAL
+            ========================= -->
+
+            <div class="codigo">
+
+                <h3>Tercer condicional</h3>
+
+                <pre><code>if (false) {
+    console.log("Este mensaje no se mostrará");
+} else if (true) {
+    console.log("Este mensaje tampoco");
+} else if (true) {
+    console.log("Este mensaje SI se mostrará 👋😁");
+} else {
+    console.log("A mi no me verás 😑🙄");
+}</code></pre>
+
+                <div class="explicacion">
+
+                    <h4>¿Por qué sale ese resultado?</h4>
+
+                    <p>
+                        El primer <b>if</b> es <b>false</b>,
+                        por lo tanto no se ejecuta.
+                    </p>
+
+                    <p>
+                        Después se revisa el primer <b>else if</b>,
+                        que es <b>true</b>. Por eso se ejecuta ese mensaje
+                        y JavaScript deja de revisar las demás condiciones.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+
+    <!-- =========================
+         FOOTER CHEVITL
+    ========================= -->
+
+    <footer class="footer-chevitl">
+
+        <div class="footer-logo">
+
+            <span class="logo-linea"></span>
+
+            <h2>CHEVITL</h2>
+
+            <span class="logo-linea"></span>
+
+        </div>
+
+
+        <p class="footer-frase">
+            Creando ideas. Diseñando experiencias.
+        </p>
+
+
+        <a
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=chevitl.e@gmail.com&su=Contacto%20desde%20mi%20página"
+            target="_blank"
+            class="footer-correo">
+
+            ✉ Escríbeme
+
+        </a>
+
+
+        <div class="footer-separador"></div>
+
+
+        <p class="footer-copy">
+            © 2026 <span>Chevitl</span> · Todos los derechos reservados.
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

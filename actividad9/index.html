@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 9</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>Actividad 9</h1>
+
+<p>cuotas:</p>
+
+<input type="text" id="input1" placeholder="Colocar cuotas">
+
+<button onclick="verificarCuotas()">Verificar</button>
+
+<p id="resultado"></p>
+
+<script>
+
+    function verificarCuotas() {
+
+let cuotas = document.querySelector("#input1").value || 10;
+
+console.log(cuotas);
+
+cuotas >= 6
+? document.querySelector("#resultado").innerHTML =
+"Serán aplicados intereses en esta compra"
+: document.querySelector("#resultado").innerHTML =
+"No serán aplicados intereses en esta compra";
+}
+
+    </script>
+
+</body>
+</html>

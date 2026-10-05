@@ -1,0 +1,264 @@
+/* =========================
+   GENERAL
+========================= */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background: #080d13;
+    color: white;
+
+    font-family: Arial, sans-serif;
+}
+
+
+/* =========================
+   TITULO
+========================= */
+
+body > h1 {
+    width: 90%;
+    max-width: 700px;
+
+    margin: 60px auto 35px;
+
+    text-align: center;
+
+    font-size: 30px;
+    line-height: 1.3;
+
+    color: white;
+
+    text-shadow: 0 0 15px rgba(0, 200, 255, 0.2);
+}
+
+
+/* =========================
+   CHECKBOX
+========================= */
+
+#checkbox {
+    width: 90%;
+    max-width: 500px;
+
+    box-sizing: border-box;
+
+    padding: 30px;
+
+    background: #0c141b;
+
+    border: 1px solid #263b49;
+
+    border-radius: 15px;
+
+    box-shadow: 0 0 25px rgba(0, 200, 255, 0.05);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+}
+
+
+/* =========================
+   LABEL
+========================= */
+
+#checkbox label {
+    color: #d7e0e6;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+#checkbox label:hover {
+    color: #00c8ff;
+}
+
+
+/* =========================
+   CHECKBOX INPUT
+========================= */
+
+#checkbox input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+
+    margin: 0 15px 0 0;
+
+    accent-color: #00bfff;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   BOTONES
+========================= */
+
+body > button {
+    width: 90%;
+    max-width: 500px;
+
+    box-sizing: border-box;
+
+    margin-top: 20px;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+/* Botón Revisar */
+
+body > button:not(#btn-enviar) {
+    background: #00bfff;
+
+    color: #031018;
+}
+
+
+body > button:not(#btn-enviar):hover {
+    background: #00d5ff;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 8px 25px rgba(0, 191, 255, 0.25);
+}
+
+
+/* =========================
+   BOTÓN ENVIAR
+========================= */
+
+#btn-enviar {
+    background: #12303d;
+
+    color: #65717d;
+
+    border: 1px solid #1c3544;
+
+    cursor: not-allowed;
+}
+
+
+/* Cuando está habilitado */
+
+#btn-enviar:not(:disabled) {
+    background: #00bfff;
+
+    color: #031018;
+
+    cursor: pointer;
+}
+
+
+#btn-enviar:not(:disabled):hover {
+    background: #00d5ff;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 8px 25px rgba(0, 191, 255, 0.25);
+}
+
+
+/* =========================
+   RESULTADO
+========================= */
+
+#parrafo {
+    width: 90%;
+    max-width: 500px;
+
+    box-sizing: border-box;
+
+    margin: 25px auto 50px;
+
+    padding: 18px;
+
+    background: #0c141b;
+
+    border: 1px solid #1c3544;
+
+    border-radius: 12px;
+
+    color: #00c8ff;
+
+    font-size: 17px;
+
+    text-align: center;
+
+    box-shadow: 0 0 20px rgba(0, 200, 255, 0.06);
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 600px) {
+
+    body > h1 {
+        margin-top: 35px;
+
+        font-size: 24px;
+    }
+
+
+    #checkbox {
+        padding: 22px 15px;
+
+        gap: 10px;
+    }
+
+
+    #checkbox label {
+        font-size: 14px;
+    }
+
+
+    #checkbox input[type="checkbox"] {
+        width: 18px;
+        height: 18px;
+    }
+
+
+    body > button {
+        padding: 13px;
+    }
+
+
+    #parrafo {
+        font-size: 15px;
+    }
+}

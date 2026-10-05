@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+
+<h1>Verificación de de números positivos o negativos a partir de una suma</h1>
+    <h3>Ingrese numero 1</h3>
+    <input id="input" type="text">
+    <h3>Ingrese numero 2</h3>
+
+<input id="input1" type="text">
+
+<button onclick="
+valor= document.querySelector('#input').value
+valor1= document.querySelector('#input1').value
+if (valor+valor1>0) {
+resultado = document.querySelector('#secret-result')
+resultado.innerHTML = 'Es un número positivo'
+}
+
+else {
+resultado = document.querySelector('#secret-result')
+resultado.innerHTML = 'Es un número negativo'
+}
+
+
+"> Verificar </button>
+<h2 id="secret-result">aca estoy y va aparecer el resultado</h2>
+
+
+<footer class="footer-chevitl">
+    <div class="footer-logo">
+        <span class="logo-linea"></span>
+        <h2>CHEVITL</h2>
+        <span class="logo-linea"></span>
+    </div>
+    <p class="footer-frase">
+        Creando ideas. Diseñando experiencias.
+    </p>
+    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=chevitl.e@gmail.com&su=Contacto%20desde%20mi%20página"
+        target="_blank"
+        class="footer-correo">
+        ✉ Escríbeme
+    </a>
+    <div class="footer-separador"></div>
+    <p class="footer-copy">
+    © 2026 <span>Chevitl</span> · Todos los derechos reservados.
+    </p>
+</footer>
+
+</body>
+</html>

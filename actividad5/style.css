@@ -1,0 +1,430 @@
+ /* =========================
+   GENERAL
+========================= */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    background: #080d13;
+    color: white;
+
+    font-family: Arial, sans-serif;
+}
+
+
+/* =========================
+   TITULO
+========================= */
+
+body > h3 {
+    width: 90%;
+    max-width: 500px;
+
+    margin: 40px auto 10px;
+
+    color: #9eabb5;
+
+    font-size: 15px;
+}
+
+
+/* =========================
+   INPUT
+========================= */
+
+body > input {
+    display: block;
+
+    width: 90%;
+    max-width: 500px;
+
+    box-sizing: border-box;
+
+    margin: 0 auto;
+
+    padding: 15px;
+
+    background: #0c141b;
+
+    border: 1px solid #263b49;
+
+    border-radius: 10px;
+
+    color: white;
+
+    font-size: 18px;
+
+    text-align: center;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+
+/* Input seleccionado */
+
+body > input:focus {
+    border-color: #00c8ff;
+
+    box-shadow: 0 0 15px rgba(0, 200, 255, 0.2);
+}
+
+
+/* =========================
+   BOTÓN
+========================= */
+
+body > button {
+    display: block;
+
+    width: 90%;
+    max-width: 500px;
+
+    margin: 30px auto 0;
+
+    padding: 15px;
+
+    background: #00bfff;
+
+    color: #031018;
+
+    border: none;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+/* Hover */
+
+body > button:hover {
+    background: #00d5ff;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 8px 25px rgba(0, 191, 255, 0.25);
+}
+
+
+/* Click */
+
+body > button:active {
+    transform: translateY(0);
+}
+
+
+/* =========================
+   RESULTADOS
+========================= */
+
+body > #Resultado,
+body > #Resultado2 {
+
+    width: 90%;
+    max-width: 500px;
+
+    box-sizing: border-box;
+
+    margin: 20px auto 0;
+
+    padding: 18px;
+
+    background: #0c141b;
+
+    border: 1px solid #1c3544;
+
+    border-radius: 12px;
+
+    color: #00c8ff;
+
+    font-size: 18px;
+
+    text-align: center;
+
+    box-shadow: 0 0 20px rgba(0, 200, 255, 0.06);
+}
+
+
+/* Espacio después del segundo resultado */
+
+body > #Resultado2 {
+    margin-bottom: 50px;
+}
+
+
+/* ==================================================
+   FOOTER CHEVITL
+================================================== */
+
+.footer-chevitl {
+    position: relative;
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    flex-shrink: 0;
+
+    background: #05070a;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 65px 20px 25px;
+
+    margin-top: auto;
+
+    overflow: hidden;
+}
+
+
+/* =========================
+   BRILLO
+========================= */
+
+.footer-chevitl::before {
+    content: "";
+
+    position: absolute;
+
+    width: 350px;
+    height: 350px;
+
+    background: #00bfff;
+
+    opacity: 0.08;
+
+    filter: blur(100px);
+
+    border-radius: 50%;
+
+    left: 50%;
+    top: -180px;
+
+    transform: translateX(-50%);
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.footer-logo {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 18px;
+
+    z-index: 1;
+}
+
+
+.footer-logo h2 {
+    margin: 0;
+
+    font-size: 42px;
+
+    letter-spacing: 8px;
+
+    font-weight: bold;
+
+    color: white;
+
+    transition: 0.3s;
+}
+
+
+.footer-logo h2:hover {
+    color: #00c8ff;
+
+    text-shadow: 0 0 15px #00c8ff;
+}
+
+
+.logo-linea {
+    width: 55px;
+    height: 2px;
+
+    flex-shrink: 0;
+
+    background: #00c8ff;
+
+    box-shadow: 0 0 8px #00c8ff;
+}
+
+
+/* =========================
+   FRASE
+========================= */
+
+.footer-frase {
+    position: relative;
+
+    color: #8b98a5;
+
+    font-size: 15px;
+
+    margin: 15px 0 22px;
+
+    z-index: 1;
+}
+
+
+/* =========================
+   CORREO
+========================= */
+
+.footer-correo {
+    position: relative;
+
+    display: inline-block;
+
+    color: #00c8ff;
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    border: 1px solid #173c4b;
+
+    padding: 10px 20px;
+
+    border-radius: 25px;
+
+    transition: 0.3s;
+
+    z-index: 1;
+}
+
+
+.footer-correo:hover {
+    background: #00c8ff;
+
+    color: #05070a;
+
+    box-shadow: 0 0 20px #00c8ff;
+}
+
+
+/* =========================
+   SEPARADOR
+========================= */
+
+.footer-separador {
+    width: 80%;
+
+    max-width: 700px;
+
+    height: 1px;
+
+    background: #17212a;
+
+    margin: 45px auto 20px;
+
+    position: relative;
+
+    z-index: 1;
+}
+
+
+/* =========================
+   COPYRIGHT
+========================= */
+
+.footer-copy {
+    position: relative;
+
+    color: #65717d;
+
+    font-size: 13px;
+
+    margin: 0;
+
+    z-index: 1;
+}
+
+
+.footer-copy span {
+    color: #00c8ff;
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 600px) {
+
+    body > h3 {
+        font-size: 13px;
+
+        margin-top: 30px;
+    }
+
+
+    body > input {
+        padding: 13px;
+    }
+
+
+    body > button {
+        padding: 13px;
+    }
+
+
+    body > #Resultado,
+    body > #Resultado2 {
+        font-size: 16px;
+    }
+
+
+    /* Footer */
+
+    .footer-chevitl {
+        padding: 50px 15px 25px;
+    }
+
+
+    .footer-logo h2 {
+        font-size: 30px;
+
+        letter-spacing: 5px;
+    }
+
+
+    .logo-linea {
+        width: 30px;
+    }
+
+
+    .footer-frase {
+        font-size: 14px;
+    }
+
+
+    .footer-correo {
+        font-size: 14px;
+    }
+}

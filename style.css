@@ -1,0 +1,660 @@
+/* =========================
+   CONFIGURACIÓN GENERAL
+========================= */
+
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    background: #02080d;
+    color: white;
+
+    font-family: Arial, sans-serif;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   FONDO RGB CELESTE
+========================= */
+
+body::before {
+    content: "";
+
+    position: fixed;
+
+    width: 500px;
+    height: 500px;
+
+    background: #00d9ff;
+
+    opacity: 0.08;
+
+    filter: blur(120px);
+
+    border-radius: 50%;
+
+    top: -200px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    pointer-events: none;
+
+    animation: brilloFondo 5s ease-in-out infinite alternate;
+}
+
+@keyframes brilloFondo {
+
+    from {
+        opacity: 0.05;
+        transform: translateX(-50%) scale(0.9);
+    }
+
+    to {
+        opacity: 0.13;
+        transform: translateX(-50%) scale(1.1);
+    }
+}
+
+
+/* =========================
+   H1
+========================= */
+
+h1 {
+    margin: 60px auto 35px;
+
+    text-align: center;
+
+    font-size: 38px;
+
+    color: #eaffff;
+
+    letter-spacing: 2px;
+
+    text-shadow:
+        0 0 5px #00eaff,
+        0 0 15px #00d9ff,
+        0 0 30px #00bfff;
+
+    animation: aparecerTitulo 1s ease, brilloTitulo 3s ease-in-out infinite alternate;
+}
+
+
+/* Entrada del título */
+
+@keyframes aparecerTitulo {
+
+    from {
+        opacity: 0;
+        transform: translateY(-25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Brillo del título */
+
+@keyframes brilloTitulo {
+
+    from {
+        text-shadow:
+            0 0 5px #00eaff,
+            0 0 12px #00d9ff;
+    }
+
+    to {
+        text-shadow:
+            0 0 8px #ffffff,
+            0 0 20px #00eaff,
+            0 0 40px #00bfff;
+    }
+}
+
+
+/* =========================
+   MENÚ
+========================= */
+
+nav {
+    width: 90%;
+    max-width: 550px;
+
+    box-sizing: border-box;
+
+    margin: 0 auto 60px;
+
+    padding: 25px;
+
+    background: rgba(5, 18, 25, 0.92);
+
+    border: 1px solid #07546a;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 0 15px rgba(0, 217, 255, 0.12),
+        0 0 40px rgba(0, 217, 255, 0.05);
+
+    position: relative;
+
+    animation: aparecerMenu 1s ease;
+}
+
+
+/* Entrada del menú */
+
+@keyframes aparecerMenu {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Línea brillante */
+
+nav::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: -1px;
+
+    left: 10%;
+
+    width: 80%;
+
+    height: 2px;
+
+    background: #00eaff;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 0 8px #00eaff,
+        0 0 18px #00bfff;
+
+    animation: lineaRGB 2s ease-in-out infinite alternate;
+}
+
+@keyframes lineaRGB {
+
+    from {
+        opacity: 0.4;
+        box-shadow: 0 0 5px #00eaff;
+    }
+
+    to {
+        opacity: 1;
+        box-shadow:
+            0 0 10px #00eaff,
+            0 0 25px #00bfff;
+    }
+}
+
+
+/* =========================
+   ENLACES
+========================= */
+
+nav a {
+
+    display: inline-block;
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    margin-bottom: 10px;
+
+    padding: 14px 18px;
+
+    background: #07141b;
+
+    border: 1px solid #124252;
+
+    border-radius: 10px;
+
+    color: #dffcff;
+
+    text-decoration: none;
+
+    text-align: center;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    transition:
+        transform 0.25s,
+        background 0.25s,
+        color 0.25s,
+        box-shadow 0.25s,
+        border-color 0.25s;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* Brillo que pasa por el botón */
+
+nav a::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: -100%;
+
+    width: 60%;
+
+    height: 100%;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,0.18),
+        transparent
+    );
+
+    transform: skewX(-20deg);
+
+    transition: 0.5s;
+}
+
+
+/* Hover */
+
+nav a:hover {
+
+    background: #00cfff;
+
+    border-color: #8df7ff;
+
+    color: #001018;
+
+    transform: translateX(7px) scale(1.02);
+
+    box-shadow:
+        0 0 8px #00eaff,
+        0 0 20px #00d9ff,
+        0 0 35px rgba(0, 217, 255, 0.35);
+}
+
+
+/* Animación del brillo */
+
+nav a:hover::before {
+    left: 130%;
+}
+
+
+/* Click */
+
+nav a:active {
+
+    transform: translateX(4px) scale(0.98);
+
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer-chevitl {
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    flex-shrink: 0;
+
+    margin-top: auto;
+
+    position: relative;
+
+    background: #010609;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 55px 20px 25px;
+
+    overflow: hidden;
+
+    border-top: 1px solid #064457;
+
+    box-shadow:
+        0 -5px 25px rgba(0, 217, 255, 0.08);
+}
+
+
+/* Luz del footer */
+
+.footer-chevitl::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 450px;
+    height: 250px;
+
+    background: #00d9ff;
+
+    opacity: 0.12;
+
+    filter: blur(100px);
+
+    border-radius: 50%;
+
+    left: 50%;
+    top: -170px;
+
+    transform: translateX(-50%);
+
+    pointer-events: none;
+
+    animation: luzFooter 4s ease-in-out infinite alternate;
+}
+
+@keyframes luzFooter {
+
+    from {
+        opacity: 0.06;
+        transform: translateX(-50%) scale(0.8);
+    }
+
+    to {
+        opacity: 0.16;
+        transform: translateX(-50%) scale(1.1);
+    }
+}
+
+
+/* =========================
+   LOGO CHEVITL
+========================= */
+
+.footer-logo {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 18px;
+
+    z-index: 1;
+}
+
+
+.footer-logo h2 {
+
+    margin: 0;
+
+    font-size: 42px;
+
+    letter-spacing: 9px;
+
+    color: #eaffff;
+
+    text-shadow:
+        0 0 5px #00eaff,
+        0 0 15px #00d9ff,
+        0 0 30px #00bfff;
+
+    transition: 0.3s;
+}
+
+
+.footer-logo h2:hover {
+
+    transform: scale(1.05);
+
+    color: white;
+
+    text-shadow:
+        0 0 8px white,
+        0 0 18px #00eaff,
+        0 0 35px #00bfff;
+}
+
+
+/* Líneas */
+
+.logo-linea {
+
+    width: 65px;
+
+    height: 2px;
+
+    background: #00eaff;
+
+    box-shadow:
+        0 0 8px #00eaff,
+        0 0 18px #00bfff;
+
+    animation: lineaFooter 2s ease-in-out infinite alternate;
+}
+
+@keyframes lineaFooter {
+
+    from {
+        opacity: 0.4;
+        width: 45px;
+    }
+
+    to {
+        opacity: 1;
+        width: 70px;
+    }
+}
+
+
+/* =========================
+   FRASE
+========================= */
+
+.footer-frase {
+
+    position: relative;
+
+    margin: 14px 0 22px;
+
+    color: #8ddce8;
+
+    font-size: 15px;
+
+    letter-spacing: 1px;
+
+    z-index: 1;
+}
+
+
+/* =========================
+   BOTÓN CORREO
+========================= */
+
+.footer-correo {
+
+    position: relative;
+
+    display: inline-block;
+
+    padding: 10px 23px;
+
+    color: #00eaff;
+
+    background: rgba(0, 217, 255, 0.03);
+
+    border: 1px solid #00aacc;
+
+    border-radius: 25px;
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    transition: 0.3s;
+
+    z-index: 1;
+}
+
+
+.footer-correo:hover {
+
+    background: #00d9ff;
+
+    color: #001018;
+
+    border-color: #9cfcff;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 0 8px #00eaff,
+        0 0 20px #00d9ff,
+        0 0 35px #00bfff;
+}
+
+
+/* =========================
+   SEPARADOR
+========================= */
+
+.footer-separador {
+
+    width: 80%;
+
+    max-width: 700px;
+
+    height: 1px;
+
+    background: #0b4655;
+
+    margin: 35px auto 17px;
+
+    box-shadow:
+        0 0 8px rgba(0, 217, 255, 0.3);
+}
+
+
+/* =========================
+   COPYRIGHT
+========================= */
+
+.footer-copy {
+
+    position: relative;
+
+    margin: 0;
+
+    color: #58747d;
+
+    font-size: 13px;
+
+    z-index: 1;
+}
+
+
+.footer-copy span {
+
+    color: #00d9ff;
+
+    text-shadow:
+        0 0 8px #00d9ff;
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 600px) {
+
+    h1 {
+
+        margin-top: 40px;
+
+        font-size: 28px;
+
+        padding: 0 15px;
+    }
+
+    nav {
+
+        width: 92%;
+
+        padding: 20px;
+    }
+
+    nav a {
+
+        padding: 13px;
+
+        font-size: 15px;
+    }
+
+    .footer-chevitl {
+
+        padding: 42px 15px 20px;
+    }
+
+    .footer-logo {
+
+        gap: 10px;
+    }
+
+    .footer-logo h2 {
+
+        font-size: 28px;
+
+        letter-spacing: 5px;
+    }
+
+    .logo-linea {
+
+        width: 30px;
+    }
+
+    .footer-frase {
+
+        font-size: 13px;
+    }
+
+    .footer-correo {
+
+        font-size: 14px;
+    }
+}

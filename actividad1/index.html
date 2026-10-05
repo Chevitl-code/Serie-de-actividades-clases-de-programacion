@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1> Hace mucha calor</h1>
+    <input type="number" id="Input" placeholder="Ingresa la temperatura">
+    <button onclick="verificarBtn()">Verificar</button>
+    <p id="p">La temperatura es</p>
+
+
+
+
+
+    <script>
+
+        function verificarBtn() {
+
+        let temperatura = Number(document.querySelector("#Input").value);
+        let p = document.querySelector("#p");
+        
+        if (temperatura <= 10){
+            p.textContent = "Hace frio 🥶🔵";
+        }
+        
+        else if (temperatura <= 20 ){
+            p.textContent = "Está templado 😐🟡";
+        }
+
+        else if (temperatura <= 30 ){
+            p.textContent = "Ya está haciendo calor 🥵🔴";
+        }
+
+        else if (temperatura <= 35 ){
+            p.textContent = "Te estás quemando 🥵🔥";
+        }
+
+        else {
+            p.textContent = "Te Mueres de  calor 🥵🔥";
+        }
+    }
+    </script>
+
+
+    
+
+
+
+    <footer class="footer-chevitl">
+
+
+<div class="footer-logo">
+    <span class="logo-linea"></span>
+    <h2>CHEVITL</h2>
+    <span class="logo-linea"></span>
+</div>
+
+<p class="footer-frase">
+    Creando ideas. Diseñando experiencias.
+</p>
+
+<a href="https://mail.google.com/mail/?view=cm&fs=1&to=chevitl.e@gmail.com&su=Contacto%20desde%20mi%20página"
+    target="_blank"
+    class="footer-correo">
+    ✉ Escríbeme
+</a>
+
+<div class="footer-separador"></div>
+
+<p class="footer-copy">
+    © 2026 <span>Chevitl</span> · Todos los derechos reservados.
+</p>
+
+
+</footer>
+
+</body>
+</html>
